@@ -15,5 +15,5 @@ struct Person {
 let testData = [
     Person(name: "Kia", date: Date()),
     Person(name: "Moritz", date: Date()),
-    Person(name: "Diego Sierraalta", date: Date())
+    Person(name: "Diego", date: Date())
 ]

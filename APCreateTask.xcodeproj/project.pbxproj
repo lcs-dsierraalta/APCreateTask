@@ -12,6 +12,7 @@
 		39614E8D27EE228700B38C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39614E8C27EE228700B38C27 /* Assets.xcassets */; };
 		39614E9027EE228700B38C27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39614E8F27EE228700B38C27 /* Preview Assets.xcassets */; };
 		39C29E8027EF553000254532 /* BirthdayPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C29E7F27EF553000254532 /* BirthdayPerson.swift */; };
+		39C29E8427EF5C8C00254532 /* BirthdayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C29E8327EF5C8C00254532 /* BirthdayCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		39614E8C27EE228700B38C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39614E8F27EE228700B38C27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		39C29E7F27EF553000254532 /* BirthdayPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayPerson.swift; sourceTree = "<group>"; };
+		39C29E8327EF5C8C00254532 /* BirthdayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				39614E8A27EE227E00B38C27 /* ContentView.swift */,
+				39C29E8327EF5C8C00254532 /* BirthdayCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39C29E8427EF5C8C00254532 /* BirthdayCell.swift in Sources */,
 				39614E8B27EE227E00B38C27 /* ContentView.swift in Sources */,
 				39614E8927EE227E00B38C27 /* APCreateTaskApp.swift in Sources */,
 				39C29E8027EF553000254532 /* BirthdayPerson.swift in Sources */,
