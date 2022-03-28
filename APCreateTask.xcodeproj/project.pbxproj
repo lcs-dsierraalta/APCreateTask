@@ -12,6 +12,7 @@
 		39614E8D27EE228700B38C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39614E8C27EE228700B38C27 /* Assets.xcassets */; };
 		39614E9027EE228700B38C27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39614E8F27EE228700B38C27 /* Preview Assets.xcassets */; };
 		396AE0A527F238FA006AE552 /* BirthdayStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396AE0A427F238FA006AE552 /* BirthdayStore.swift */; };
+		396AE0A727F23C24006AE552 /* AddBirthday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396AE0A627F23C24006AE552 /* AddBirthday.swift */; };
 		39C29E8027EF553000254532 /* BirthdayPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C29E7F27EF553000254532 /* BirthdayPerson.swift */; };
 		39C29E8427EF5C8C00254532 /* BirthdayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C29E8327EF5C8C00254532 /* BirthdayCell.swift */; };
 /* End PBXBuildFile section */
@@ -23,6 +24,7 @@
 		39614E8C27EE228700B38C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39614E8F27EE228700B38C27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		396AE0A427F238FA006AE552 /* BirthdayStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayStore.swift; sourceTree = "<group>"; };
+		396AE0A627F23C24006AE552 /* AddBirthday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBirthday.swift; sourceTree = "<group>"; };
 		39C29E7F27EF553000254532 /* BirthdayPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayPerson.swift; sourceTree = "<group>"; };
 		39C29E8327EF5C8C00254532 /* BirthdayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 			children = (
 				39614E8A27EE227E00B38C27 /* ContentView.swift */,
 				39C29E8327EF5C8C00254532 /* BirthdayCell.swift */,
+				396AE0A627F23C24006AE552 /* AddBirthday.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				396AE0A727F23C24006AE552 /* AddBirthday.swift in Sources */,
 				39C29E8427EF5C8C00254532 /* BirthdayCell.swift in Sources */,
 				39614E8B27EE227E00B38C27 /* ContentView.swift in Sources */,
 				396AE0A527F238FA006AE552 /* BirthdayStore.swift in Sources */,

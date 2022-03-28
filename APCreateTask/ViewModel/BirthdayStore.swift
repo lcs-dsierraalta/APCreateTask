@@ -7,4 +7,6 @@
 
 import Foundation
 
-
+class BirthdayStore {
+    var birthdays: [Person] = []
+}
