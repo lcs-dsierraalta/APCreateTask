@@ -11,6 +11,7 @@
 		39614E8B27EE227E00B38C27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39614E8A27EE227E00B38C27 /* ContentView.swift */; };
 		39614E8D27EE228700B38C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39614E8C27EE228700B38C27 /* Assets.xcassets */; };
 		39614E9027EE228700B38C27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39614E8F27EE228700B38C27 /* Preview Assets.xcassets */; };
+		396AE0A527F238FA006AE552 /* BirthdayStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396AE0A427F238FA006AE552 /* BirthdayStore.swift */; };
 		39C29E8027EF553000254532 /* BirthdayPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C29E7F27EF553000254532 /* BirthdayPerson.swift */; };
 		39C29E8427EF5C8C00254532 /* BirthdayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C29E8327EF5C8C00254532 /* BirthdayCell.swift */; };
 /* End PBXBuildFile section */
@@ -21,6 +22,7 @@
 		39614E8A27EE227E00B38C27 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		39614E8C27EE228700B38C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39614E8F27EE228700B38C27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		396AE0A427F238FA006AE552 /* BirthdayStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayStore.swift; sourceTree = "<group>"; };
 		39C29E7F27EF553000254532 /* BirthdayPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayPerson.swift; sourceTree = "<group>"; };
 		39C29E8327EF5C8C00254532 /* BirthdayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 		39C29E7E27EF54BE00254532 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				396AE0A427F238FA006AE552 /* BirthdayStore.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			files = (
 				39C29E8427EF5C8C00254532 /* BirthdayCell.swift in Sources */,
 				39614E8B27EE227E00B38C27 /* ContentView.swift in Sources */,
+				396AE0A527F238FA006AE552 /* BirthdayStore.swift in Sources */,
 				39614E8927EE227E00B38C27 /* APCreateTaskApp.swift in Sources */,
 				39C29E8027EF553000254532 /* BirthdayPerson.swift in Sources */,
 			);

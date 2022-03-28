@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var showingAddBirthday = false
+    
     var body: some View {
 
             List {
@@ -16,6 +19,13 @@ struct ContentView: View {
                 BirthdayCell(birthday: testData[2])
             }
             .navigationTitle("Birthdays")
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button("Add") {
+                        showingAddBirthday = true
+                    }
+                }
+            }
     }
 }
 
