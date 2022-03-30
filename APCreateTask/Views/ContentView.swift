@@ -14,23 +14,26 @@ struct ContentView: View {
     @State private var showingAddBirthday = false
     
     var body: some View {
-
-            List {
-                BirthdayCell(birthday: testData[0])
-                BirthdayCell(birthday: testData[1])
-                BirthdayCell(birthday: testData[2])
+        
+        List {
+            
+            ForEach(store.birthdays) { birthday in
+                
+                BirthdayCell(birthday: birthday)
+                
             }
-            .navigationTitle("Birthdays")
-            .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    Button("Add") {
-                        showingAddBirthday = true
-                    }
+        }
+        .navigationTitle("Birthdays")
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button("Add") {
+                    showingAddBirthday = true
                 }
             }
-            .sheet(isPresented: $showingAddBirthday) {
-                AddBirthday(store: store, showing: $showingAddBirthday)
-            }
+        }
+        .sheet(isPresented: $showingAddBirthday) {
+            AddBirthday(store: store, showing: $showingAddBirthday)
+        }
     }
 }
 
@@ -41,3 +44,4 @@ struct ContentView_Previews: PreviewProvider {
         }
     }
 }
+

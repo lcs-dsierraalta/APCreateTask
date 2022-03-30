@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Person {
+struct Person: Identifiable {
+    
+    var id = UUID()
     var name: String
     var date = Date()
 }
