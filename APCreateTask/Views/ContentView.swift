@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @ObservedObject var store: BirthdayStore
+    
     @State private var showingAddBirthday = false
     
     var body: some View {
@@ -26,13 +28,16 @@ struct ContentView: View {
                     }
                 }
             }
+            .sheet(isPresented: $showingAddBirthday) {
+                AddBirthday(store: store, showing: $showingAddBirthday)
+            }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ContentView()
+            ContentView(store: testStore)
         }
     }
 }

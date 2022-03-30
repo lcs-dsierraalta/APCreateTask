@@ -59,10 +59,10 @@
 		39614E8727EE227E00B38C27 /* APCreateTask */ = {
 			isa = PBXGroup;
 			children = (
+				39614E8827EE227E00B38C27 /* APCreateTaskApp.swift */,
 				39C29E7E27EF54BE00254532 /* ViewModel */,
 				39C29E7D27EF54B100254532 /* Models */,
 				39C29E7C27EF54AB00254532 /* Views */,
-				39614E8827EE227E00B38C27 /* APCreateTaskApp.swift */,
 				39614E8C27EE228700B38C27 /* Assets.xcassets */,
 				39614E8E27EE228700B38C27 /* Preview Content */,
 			);
