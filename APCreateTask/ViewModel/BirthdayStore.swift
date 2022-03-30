@@ -10,3 +10,5 @@ import Foundation
 class BirthdayStore: ObservableObject {
     var birthdays: [Person] = []
 }
+
+let testStore = BirthdayStore()
