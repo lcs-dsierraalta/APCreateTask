@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct AddBirthday: View {
+    
+//    @ObservedObject var store: BirthdayStore
+    
+    @State private var name = ""
+    @State private var date = Date()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        NavigationView {
+            VStack {
+                Form {
+                    
+                TextField("Name", text: $name)
+                
+                DatePicker("Date:", selection: $date)
+                
+                }
+            }
+            .navigationTitle("New Birthday")
+        }
+        
     }
 }
 

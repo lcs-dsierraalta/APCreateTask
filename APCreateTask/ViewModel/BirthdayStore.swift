@@ -7,6 +7,6 @@
 
 import Foundation
 
-class BirthdayStore {
+class BirthdayStore: ObservableObject {
     var birthdays: [Person] = []
 }
