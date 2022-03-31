@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BirthdayCell: View {
     
-    var birthday: Person
+   @ObservedObject var birthday: Person
     
     var body: some View {
         HStack {
