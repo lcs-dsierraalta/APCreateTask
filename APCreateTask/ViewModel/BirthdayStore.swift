@@ -8,7 +8,7 @@
 import Foundation
 
 class BirthdayStore: ObservableObject {
-    var birthdays: [Person] = []
+   @Published var birthdays: [Person] = []
 }
 
 let testStore = BirthdayStore()
