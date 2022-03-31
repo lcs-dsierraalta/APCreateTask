@@ -22,6 +22,7 @@ struct ContentView: View {
                 BirthdayCell(birthday: birthday)
                 
             }
+            .onDelete(perform: delete)
         }
         .navigationTitle("Birthdays")
         .toolbar {
@@ -35,6 +36,11 @@ struct ContentView: View {
             AddBirthday(store: store, showing: $showingAddBirthday)
         }
     }
+    
+    func delete(at offsets: IndexSet) {
+        store.birthdays.remove(atOffsets: offsets)
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
