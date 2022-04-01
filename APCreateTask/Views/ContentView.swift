@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  APCreateTask
 //
-//  Created by Diego Sierraalta on 2022-03-25.
+// 
 //
 
 import SwiftUI
@@ -15,25 +15,37 @@ struct ContentView: View {
     
     var body: some View {
         
-        List {
+        VStack {
             
-            ForEach(store.birthdays) { birthday in
+            Picker(selection: .constant(""), label: Text("Sort by..."), content: {
                 
-                BirthdayCell(birthday: birthday)
+                Text("Name").tag(0)
+                Text("Date").tag(1)
                 
+            })
+            .pickerStyle(MenuPickerStyle())
+            
+            List {
+                
+                ForEach(store.birthdays) { birthday in
+                    
+                    BirthdayCell(birthday: birthday)
+                    
+                }
+                .onDelete(perform: delete)
             }
-            .onDelete(perform: delete)
-        }
-        .navigationTitle("Birthdays")
-        .toolbar {
-            ToolbarItem(placement: .primaryAction) {
-                Button("Add") {
-                    showingAddBirthday = true
+            .navigationTitle("Birthdays")
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button("Add") {
+                        showingAddBirthday = true
+                    }
                 }
             }
-        }
-        .sheet(isPresented: $showingAddBirthday) {
-            AddBirthday(store: store, showing: $showingAddBirthday)
+            .sheet(isPresented: $showingAddBirthday) {
+                AddBirthday(store: store, showing: $showingAddBirthday)
+            }
+            
         }
     }
     
