@@ -17,7 +17,7 @@ struct ContentView: View {
         
             List {
                 
-                ForEach(store.birthdays) { birthday in
+                ForEach(store.birthdays.sorted(by: { oneBirthday, nextBirthday in return oneBirthday.name < nextBirthday.name})) { birthday in
                     
                     BirthdayCell(birthday: birthday)
                     
