@@ -15,16 +15,6 @@ struct ContentView: View {
     
     var body: some View {
         
-        VStack {
-            
-            Picker(selection: .constant(""), label: Text("Sort by..."), content: {
-                
-                Text("Name").tag(0)
-                Text("Date").tag(1)
-                
-            })
-            .pickerStyle(MenuPickerStyle())
-            
             List {
                 
                 ForEach(store.birthdays) { birthday in
@@ -46,7 +36,6 @@ struct ContentView: View {
                 AddBirthday(store: store, showing: $showingAddBirthday)
             }
             
-        }
     }
     
     func delete(at offsets: IndexSet) {
