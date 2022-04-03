@@ -13,9 +13,11 @@ struct ContentView: View {
     
     @State private var showingAddBirthday = false
     
+    @State private var searchTerm = ""
+    
     var body: some View {
         
-            List {
+        List(filter(originalList: store.birthdays, using: searchTerm)) { Person in 
                 
                 ForEach(store.birthdays.sorted(by: { oneBirthday, nextBirthday in return oneBirthday.name < nextBirthday.name})) { birthday in
                     
@@ -24,6 +26,7 @@ struct ContentView: View {
                 }
                 .onDelete(perform: delete)
             }
+            .searchable(text: $searchTerm)
             .navigationTitle("Birthdays")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
@@ -36,6 +39,20 @@ struct ContentView: View {
                 AddBirthday(store: store, showing: $showingAddBirthday)
             }
             
+    }
+    
+    func filter(originalList: [Person], using term: String) -> [Person] {
+        
+        if term.isEmpty {
+            
+            return originalList
+            
+        } else {
+            
+            return store.birthdays.filter {$0.name.contains(searchTerm)}
+            
+        }
+        
     }
     
     func delete(at offsets: IndexSet) {
