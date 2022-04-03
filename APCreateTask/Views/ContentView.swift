@@ -17,14 +17,11 @@ struct ContentView: View {
     
     var body: some View {
         
-        List(filter(originalList: store.birthdays, using: searchTerm)) { Person in 
-                
-                ForEach(store.birthdays.sorted(by: { oneBirthday, nextBirthday in return oneBirthday.name < nextBirthday.name})) { birthday in
-                    
-                    BirthdayCell(birthday: birthday)
-                    
-                }
-                .onDelete(perform: delete)
+        List(filter(originalList: store.birthdays.sorted(by: { oneBirthday, nextBirthday in return oneBirthday.name < nextBirthday.name}), using: searchTerm)) { birthday in
+            
+            BirthdayCell(birthday: birthday)
+
+            
             }
             .searchable(text: $searchTerm)
             .navigationTitle("Birthdays")
@@ -53,10 +50,6 @@ struct ContentView: View {
             
         }
         
-    }
-    
-    func delete(at offsets: IndexSet) {
-        store.birthdays.remove(atOffsets: offsets)
     }
     
 }
