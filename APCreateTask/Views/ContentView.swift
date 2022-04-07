@@ -20,22 +20,22 @@ struct ContentView: View {
         List(filter(originalList: store.birthdays.sorted(by: { oneBirthday, nextBirthday in return oneBirthday.name < nextBirthday.name}), using: searchTerm)) { birthday in
             
             BirthdayCell(birthday: birthday)
-
             
-            }
-            .searchable(text: $searchTerm)
-            .navigationTitle("Birthdays")
-            .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    Button("Add") {
-                        showingAddBirthday = true
-                    }
+            
+        }
+        .searchable(text: $searchTerm)
+        .navigationTitle("Birthdays")
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button("Add") {
+                    showingAddBirthday = true
                 }
             }
-            .sheet(isPresented: $showingAddBirthday) {
-                AddBirthday(store: store, showing: $showingAddBirthday)
-            }
-            
+        }
+        .sheet(isPresented: $showingAddBirthday) {
+            AddBirthday(store: store, showing: $showingAddBirthday)
+        }
+        
     }
     
     func filter(originalList: [Person], using term: String) -> [Person] {
@@ -46,7 +46,18 @@ struct ContentView: View {
             
         } else {
             
-            return store.birthdays.filter {$0.name.contains(searchTerm)}
+            var filteredResults: [Person] = []
+            
+            for currentBirthday in originalList {
+                
+                if currentBirthday.name.contains(term) {
+                    filteredResults.append(currentBirthday)
+                    
+                }
+                
+            }
+            
+            return filteredResults
             
         }
         
