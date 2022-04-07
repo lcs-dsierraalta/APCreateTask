@@ -17,7 +17,9 @@ struct ContentView: View {
     
     var body: some View {
         
-        List(filter(originalList: store.birthdays.sorted(by: { oneBirthday, nextBirthday in return oneBirthday.name < nextBirthday.name}), using: searchTerm)) { birthday in
+        List(filter(originalList: store.birthdays.sorted(by:
+                    { oneBirthday, nextBirthday in return oneBirthday.name < nextBirthday.name}),
+                    using: searchTerm)) { birthday in
             
             BirthdayCell(birthday: birthday)
             
