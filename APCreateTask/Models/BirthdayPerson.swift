@@ -21,7 +21,7 @@ class Person: Identifiable, ObservableObject {
 }
 
 let testData = [
-    Person(name: "Kia", date: Date()),
-    Person(name: "Moritz", date: Date()),
-    Person(name: "Diego", date: Date())
+    Person(name: "Person 1", date: Date()),
+    Person(name: "Friend", date: Date()),
+    Person(name: "Dog", date: Date())
 ]
